@@ -409,3 +409,5 @@ def main():
     translator = Translator("eng_Latn", tgt_lang, device="cuda", queue_len=queue_len)
     en_json_file = input_dir / f'train{file_num:02d}.en.json.gz'
     translator.translate(en_json_file, output_dir)
+
+main()
