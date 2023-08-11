@@ -406,6 +406,6 @@ def main():
     tgt_lang = 'mar_Deva'
     assert tgt_lang in ['mar_Deva', 'hin_Deva']
 
-    translator = Translator("eng_Latn", tgt_lang, device="cuda", queue_len)
+    translator = Translator("eng_Latn", tgt_lang, device="cuda", queue_len=queue_len)
     en_json_file = input_dir / f'train{file_num:02d}.en.json.gz'
     translator.translate(en_json_file, output_dir)
